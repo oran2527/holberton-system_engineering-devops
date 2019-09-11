@@ -1,4 +1,4 @@
-Atask_0_show_the_current_directory_where_I_am 
+task_0_show_the_current_directory_where_I_am 
 task_1_show_the_name_of_files_and_directories
 task_2_change_to_home_directory
 task_3_show_the_long_format
@@ -12,3 +12,5 @@ task_10_previous_directory
 task_11_show_list_different_directories
 task_12_type_file
 task_13_symbolic_link
+task_14_cp_special
+task_15_mv_special
