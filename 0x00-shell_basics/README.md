@@ -1,4 +1,4 @@
-task_0_show_the_current_directory_where_I_am 
+iask_0_show_the_current_directory_where_I_am 
 task_1_show_the_name_of_files_and_directories
 task_2_change_to_home_directory
 task_3_show_the_long_format
@@ -8,3 +8,4 @@ task_6_create_directory_tmp_directory
 task_7_move_betty_file
 task_8_delete_betty
 task_9_erase_holberton
+task_10_previous_directory
