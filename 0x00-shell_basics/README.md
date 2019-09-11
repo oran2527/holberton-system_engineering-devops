@@ -1,2 +1,6 @@
-task_0_show_the_current_directory_where_I_am 
+Atask_0_show_the_current_directory_where_I_am 
 task_1_show_the_name_of_files_and_directories
+task_2_change_to_home_directory
+task_3_show_the_long_format
+task_4_show_hidden_files
+task_5_show_directory_contents
