@@ -1,4 +1,4 @@
-AAtask_0_show_the_current_directory_where_I_am 
+task_0_show_the_current_directory_where_I_am 
 task_1_show_the_name_of_files_and_directories
 task_2_change_to_home_directory
 task_3_show_the_long_format
