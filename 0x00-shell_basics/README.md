@@ -15,3 +15,5 @@ task_13_symbolic_link
 task_14_cp_special
 task_15_mv_special
 task_16_special_symbol_~
+task_17_tree
+task_18_ls_special
