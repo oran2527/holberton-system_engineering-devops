@@ -11,3 +11,4 @@ task_9_erase_holberton
 task_10_previous_directory
 task_11_show_list_different_directories
 task_12_type_file
+task_13_symbolic_link
