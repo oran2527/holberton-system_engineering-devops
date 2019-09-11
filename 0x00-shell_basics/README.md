@@ -6,3 +6,4 @@ task_4_show_hidden_files
 task_5_show_directory_contents
 task_6_create_directory_tmp_directory
 task_7_move_betty_file
+task_8_delete_betty
