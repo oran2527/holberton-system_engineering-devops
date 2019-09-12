@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ find -user guillaume -name hello ] then [ chown betty hello ] fi 
+find -user guillaume -name hello -exec chown betty hello  
