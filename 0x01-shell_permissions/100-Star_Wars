@@ -1,0 +1,6 @@
+#!/bin/bash
+$ url="https://www.youtube.com/results?search_query=StarWars+IV+episode"
+$ echo "$url"
+https://www.youtube.com/results?search_query=StarWars+IV+episode
+$ echo "${url#*v=}"
+StarWars+IV+episode
