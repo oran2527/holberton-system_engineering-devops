@@ -5,4 +5,4 @@ task4_last_lines
 task5_first_lines
 task8_save_current_state
 task10_delete_js_files
-task_11_count_directories
+task12_10_first_registers
