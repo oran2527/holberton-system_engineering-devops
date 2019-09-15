@@ -4,6 +4,7 @@ task_2_read_file
 task3_read_some_files
 task4_last_lines
 task5_first_lines
+task6_third_line
 task7_create_file
 task8_save_current_state
 task10_delete_js_files
