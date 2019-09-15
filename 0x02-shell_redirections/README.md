@@ -3,3 +3,4 @@ task_2_read_file
 task3_read_some_files
 task4_last_lines
 task5_first_lines
+task8_save_current_state
