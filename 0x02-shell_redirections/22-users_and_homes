@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/passwd | tr -s ":" " " | cut -d " " -f 5,6 | sort
+tr -s ":" " " | cut -d ' ' -f 5,6 | sort
