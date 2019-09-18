@@ -1,0 +1,13 @@
+task_0_hello_worldtask_0_hello_world
+task_1_confused_smiley
+task_2_read_file
+task3_read_some_files
+task4_last_lines
+task5_first_lines
+task6_third_line
+task7_create_file
+task8_save_current_state
+task9_duplicate
+task10_delete_js_files
+task12_10_first_register
+task13_sort_uniq
