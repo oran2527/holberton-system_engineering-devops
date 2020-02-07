@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script print the current directory files after "-"
+for file in $PWD/*
+do
+    echo "${file}" | cut -d "-" -f5
+done    
