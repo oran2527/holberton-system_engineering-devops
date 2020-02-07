@@ -6,9 +6,7 @@ do
     if [ $counter -eq 9 ]
     then
     	echo "Hi"
-    fi
-    if [ $counter -ne 9 ]
-    then
+    else
     	echo "Holberton School"
     fi	 	
     counter=$((counter + 1)) 
