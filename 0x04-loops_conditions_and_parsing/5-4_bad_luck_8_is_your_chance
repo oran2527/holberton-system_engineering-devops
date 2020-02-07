@@ -1,19 +1,16 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
 counter=1
-while [ "$counter" -le 10 ]
+while [ $counter -le 10 ]
 do
     if [ $counter -eq 4 ]
     then
     	echo "bad luck"
-    fi
-    if [ $counter -eq 8 ]
+    elif [ $counter -eq 8 ]
     then
-    	echo "good luck"
-    fi	 	
-    if [ $counter -ne 8 -a $counter -ne 4 ]
-    then
-    	echo "Holberton School"
+       	echo "good luck"
+    else
+       	echo "Holberton School"
     fi	 	
     counter=$((counter + 1)) 
 done
