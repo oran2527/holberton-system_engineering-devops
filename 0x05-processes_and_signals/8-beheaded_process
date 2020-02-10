@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script kills the current process
+kill "$(pgrep -f "7-highlander")"
+trap "echo 'Killed'" 15
