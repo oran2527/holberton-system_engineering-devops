@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# The script changes the ip addres of facebook and localhost
-if [ -n "$(grep localhost /etc/hosts)" ]
-then
-   
-   
-fi   
