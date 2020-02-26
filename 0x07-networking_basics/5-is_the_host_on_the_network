@@ -2,7 +2,7 @@
 # The script executes ping to the first argument ip address
 if [ "$1" ]
 then
-    ping $1
+    ping -c 5 $1
 else
     echo Usage: 5-is_the_host_on_the_network {IP_ADDRESS}
 fi    
