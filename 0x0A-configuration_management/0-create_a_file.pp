@@ -1,5 +1,5 @@
-#!//usr/bin/env bash
 # This manifest creates a file with some specifications
+#!/usr/bin/env bash
 file { 'tmp/holberton':
     ensure  => file
     path    => '/tmp/holberton',
