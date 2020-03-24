@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # configuration with puppet
+include stdlib
+
 file_line { 'PasswordAuthentication':
         path => '~/etc/ssh/ssh_config',
         line => 'PasswordAuthentication no',
