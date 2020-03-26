@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
-#install nginx on ubuntu@35.231.52.206
+#install nginx 
 sudo apt -y update
 sudo apt -y install nginx
 sudo ufw allow 'Nginx HTTP'
-sudo chmod '0777' /var/www/html/index.nginx-debian.html
-sudo chmod '0777' /etc/nginx/sites-available/default
 echo "Holberton School for the win!" > /var/www/html/index.nginx-debian.html
-sudo /etc/init.d/nginx start
+sudo service stop
 sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TG
 Ulwu4 permanent;\n' /etc/nginx/sites-available/default
-sudo /etc/init.d/nginx start
+sudo service restart
