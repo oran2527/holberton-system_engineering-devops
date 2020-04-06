@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# change user to nginx in nginx server and change port to 8080
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+sudo sed -i 's/#user/user/g' /etc/nginx/nginx.conf
+sudo sed -i 's/www-data;/nginx;/g' /etc/nginx/nginx.conf
