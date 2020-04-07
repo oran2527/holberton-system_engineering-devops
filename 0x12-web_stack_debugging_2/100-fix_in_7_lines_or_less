@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# change user to nginx in nginx server and change port to 8080
+pkill -f apache2
+sudo chmod 644 /etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+sudo sed -i '1i user nginx;' /etc/nginx/sites-available/default
+sudo service nginx restart
