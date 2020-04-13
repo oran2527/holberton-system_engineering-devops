@@ -1,11 +1,3 @@
-eck user and change                                                                               
-if [ "$#" -eq "1" ]                                                                                   
-then                                                                                                  
-   PW=sudo getent passwd "$1" | cut -d: -f1                                                             
-   if [ "$PW" !=  "" ]                                                                                
-   then                                                                                            
-      US=sudo getent passwd "$1" | cut -d: -f1                                                       
-      sudo chuser "$US"                                                                              
-      whoami                                                                                       
-   fi                                                                                                 
-fi             
+#!/usr/bin/env bash
+# check user and change
+sudo -u "$1" whoami
