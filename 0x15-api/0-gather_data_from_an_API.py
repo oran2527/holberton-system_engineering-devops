@@ -6,7 +6,7 @@ if __name__ == '__main__':
     import json
     import requests
     import sys
-    
+
     NUMBER_OF_DONE_TASKS = 0
     TOTAL_NUMBER_OF_TASKS = 0
     EMPLOYEE_NAME = ""
