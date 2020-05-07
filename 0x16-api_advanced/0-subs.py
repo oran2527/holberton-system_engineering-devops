@@ -2,13 +2,13 @@
 '''point 0 reddit appi'''
 
 
-import json
-import requests
-num_subs = 0
-
-
 def number_of_subscribers(subreddit):
     '''return number subscribers depending topic and device you are using'''
+
+    import json
+    import requests
+    num_subs = 0
+
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
     agChrome = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
