@@ -10,6 +10,8 @@ def recurse(subreddit, hot_list=[], url=None):
 
     if url is None:
         url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    if url is not None:
+        url = url    
     agChrome = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
     agMac = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) \
@@ -45,7 +47,7 @@ Safari/537.36"
     headers_concat = '{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\
 '.format(ag1, s, ag2, s, ag3, s, ag4, s, ag5, s, ag6, s, ag7, s, ag8, s, ag9)
     headers = {"User-Agent": headers_concat}
-    red = requests.get(url, headers=headers)
+    red = requests.get(url, headers=headers)    	
     if red:
         reddit = red.json()
         info = reddit.get('data').get('children')
@@ -54,7 +56,7 @@ Safari/537.36"
 '.format(subreddit, page)
         for i in info:
             hot_list.append(i.get('data').get('title'))
-        return recurse(subreddit, hot_list, url)
+        recurse(subreddit, hot_list, url)
     if not red and url is None:
         return None
     if not red and url is not None:
