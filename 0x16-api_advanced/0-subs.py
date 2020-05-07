@@ -6,7 +6,7 @@ def number_of_subscribers(subreddit):
     '''return number subscribers depending topic and device you are using'''
 
     import json
-    from Requests import requests
+    import requests
     num_subs = 0
 
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
@@ -39,8 +39,8 @@ Safari/537.36"
     ag4 = agIosIphone
     ag5 = agIpad
     ag6 = agIpod
-    ag7 = AgAndroid
-    ag8 = AgAndroidSamsung
+    ag7 = agAndroid
+    ag8 = agAndroidSamsung
     ag9 = agLg
     headers_concat = '{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\
 '.format(ag1, s, ag2, s, ag3, s, ag4, s, ag5, s, ag6, s, ag7, s, ag8, s, ag9)
