@@ -6,6 +6,7 @@ import json
 import requests
 num_subs = 0
 
+
 def number_of_subscribers(subreddit):
     '''return number subscribers depending topic and device you are using'''
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
@@ -32,9 +33,17 @@ Safari/537.36"
     agLg = "Mozilla/5.0 (Linux; Android 10; LM-Q720) AppleWebKit/537.36 \
 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36"
     s = ' '
+    a1 = agChrome
+    a2 = agMac
+    a3 = agLinux
+    a4 = agIosIphone
+    a5 = agIpad
+    a6 = agIpod
+    a7 = AgAndroid
+    a8 = AgAndroidSamsung
+    a9 = agLg
     headers_concat = '{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\
-'.format(agChrome, s, agMac, s, agLinux, s, agIosIphone, s, agIpad, s, 
-    agIpod, s, agAndroid, s, agAndroidSamsung, s, agLg)
+'.format(ag1, s, ag2, s, ag3, s, ag4, s, ag5, s, ag6, s, ag7, s, ag8, s, ag9)
     headers = {"User-Agent": headers_concat}
     red = requests.get(url, headers=headers)
     if red:
