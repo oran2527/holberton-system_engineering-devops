@@ -8,7 +8,7 @@ def top_ten(subreddit):
     import json
     from Requests import requests
 
-    url = 'https://www.reddit.com/r/{}/top.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     agChrome = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
     agMac = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) \
