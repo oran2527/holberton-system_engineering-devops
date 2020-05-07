@@ -32,9 +32,17 @@ Safari/537.36"
     agLg = "Mozilla/5.0 (Linux; Android 10; LM-Q720) AppleWebKit/537.36 \
 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36"
     s = ' '
+    ag1 = agChrome
+    ag2 = agMac
+    ag3 = agLinux
+    ag4 = agIosIphone
+    ag5 = agIpad
+    ag6 = agIpod
+    ag7 = agAndroid
+    ag8 = agAndroidSamsung
+    ag9 = agLg	
     headers_concat = '{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\
-'.format(agChrome, s, agMac, s, agLinux, s, agIosIphone, s, agIpad, s, 
-    agIpod, s, agAndroid, s, agAndroidSamsung, s, agLg)
+'.format(ag1, s, ag2, s, ag3, s, ag4, s, ag5, s, ag6, s, ag7, s, ag8, s, ag9)
     headers = {"User-Agent": headers_concat}
     red = requests.get(url, headers=headers)
     if red:
