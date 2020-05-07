@@ -49,14 +49,18 @@ Safari/537.36"
     if red:
         reddit = red.json()
         info = reddit.get('data').get('children')
-        page = reddit.get('data').get('after')
-        url = 'https://www.reddit.com/r/{}/hot.json?after={}\
-'.format(subreddit, page)
         for i in info:
             hot_list.append(i.get('data').get('title'))
-        if page is None:
-            return hot_list
-        else:
+        page = reddit.get('data').get('after')
+        print(page)
+        if page is not None:
+            print(len(hot_list))
+            url = 'https://www.reddit.com/r/{}/hot.json?after={}\
+'.format(subreddit, page)
             recurse(subreddit, hot_list, url)
+        if page is None:
+            print("preparado para retornar lista")
+            print(hot_list)
+            return hot_list
     else:
         return None
