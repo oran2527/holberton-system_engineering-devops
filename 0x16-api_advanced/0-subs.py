@@ -6,7 +6,7 @@ def number_of_subscribers(subreddit):
     '''return number subscribers depending topic and device you are using'''
 
     import json
-    import requests
+    from Requests import requests
     num_subs = 0
 
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)

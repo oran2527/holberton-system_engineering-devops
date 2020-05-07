@@ -6,7 +6,7 @@ def top_ten(subreddit):
     '''return 10 top ten postsg'''
 
     import json
-    import requests
+    from Requests import requests
 
     url = 'https://www.reddit.com/r/{}/top.json'.format(subreddit)
     agChrome = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
