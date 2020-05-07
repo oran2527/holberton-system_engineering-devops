@@ -6,6 +6,7 @@ import json
 import requests
 num_subs = 0
 
+
 def top_ten(subreddit):
     '''return 10 top ten postsg'''
     url = 'https://www.reddit.com/r/{}/top.json'.format(subreddit)
@@ -40,7 +41,7 @@ Safari/537.36"
     ag6 = agIpod
     ag7 = agAndroid
     ag8 = agAndroidSamsung
-    ag9 = agLg	
+    ag9 = agLg
     headers_concat = '{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\
 '.format(ag1, s, ag2, s, ag3, s, ag4, s, ag5, s, ag6, s, ag7, s, ag8, s, ag9)
     headers = {"User-Agent": headers_concat}
@@ -48,6 +49,7 @@ Safari/537.36"
     if red:
         reddit = red.json()
         for i in range(0, 10):
-            print(reddit.get('data').get('children')[i].get('data').get('title'))
+            print(reddit.get('data').get('children')[i].get('data\
+').get('title'))
     else:
         print('None')
