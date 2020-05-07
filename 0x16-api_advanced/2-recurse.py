@@ -2,18 +2,14 @@
 '''point 2 posts'''
 
 
-hot_list = []
-final = []
-count = 0
-
-
-def recurse(subreddit):
+def recurse(subreddit, hot_list=[], url=None):
     '''return total titles lists'''
 
     import json
     import requests
 
-    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    if url is None:
+        url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     agChrome = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
     agMac = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) \
@@ -52,27 +48,14 @@ Safari/537.36"
     red = requests.get(url, headers=headers)
     if red:
         reddit = red.json()
-        final = recurse2(reddit, hot_list, count)
-        print(final)
-        return final
-    else:
+        info = reddit.get('data').get('children')
+        page = reddit.get('data').get('after')
+        url = 'https://www.reddit.com/r/{}/hot.json?after={}\
+'.format(subreddit, page)
+        for i in info:
+            hot_list.append(i.get('data').get('title'))
+        return recurse(subreddit, hot_list, url)
+    if not red and url is None:
         return None
-
-
-def recurse2(reddit, hot_list, count):
-    '''recursion 2 for adding title of the json data'''
-    try:
-        title = ''
-        if reddit.get('data').get('children')[count].get('data\
-').get('title'):
-            title = reddit.get('data').get('children')[count].get('data\
-').get('title')
-            hot_list.append(title)
-            count += 1
-            recurse2(reddit, hot_list, count)
-        else:
-            return hot_list
-    except:
-        return hot_list
-    finally:
+    if not red and url is not None:
         return hot_list
