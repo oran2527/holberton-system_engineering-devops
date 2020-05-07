@@ -51,4 +51,4 @@ Safari/537.36"
             print(reddit.get('data').get('children')[i].get('data\
 ').get('title'))
     else:
-        print('None')
+        print(None)
